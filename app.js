@@ -57,7 +57,30 @@ function sinifListesiniGuncelle() {
   var ogrenciListesiHTML = "";
   for (var i = 0; i < ogrenciler.length; i++) {
     var ogrenci = ogrenciler[i];
-    ogrenciListesiHTML += "<tr><td>" + (i + 1) + "</td><td>" + ogrenci.adSoyad + "</td><td>" + ogrenci.puan + "</td></tr>";
+    var puanClass = "";
+    if (ogrenci.puan < 50) {
+      puanClass = "puan-kucuk";
+    }
+    ogrenciListesiHTML += "<tr class='" + puanClass + "'><td>" + (i + 1) + "</td><td>" + ogrenci.adSoyad + "</td><td>" + ogrenci.puan + "</td><td class='actions'><button onclick='ogrenciDuzenle(" + i + ")'>Düzenle</button><button onclick='ogrenciSil(" + i + ")'>Sil</button></td></tr>";
   }
   ogrenciListesi.querySelector("tbody").innerHTML = ogrenciListesiHTML;
 }
+
+// Öğrenci düzenleme fonksiyonu
+function ogrenciDuzenle(index) {
+  var ogrenci = ogrenciler[index];
+  var adSoyadInput = document.getElementById("adSoyad");
+  var puanInput = document.getElementById("puan");
+  adSoyadInput.value = ogrenci.adSoyad;
+  puanInput.value = ogrenci.puan;
+  ogrenciSil(index);
+}
+
+// Öğrenci silme fonksiyonu
+function ogrenciSil(index) {
+  ogrenciler.splice(index, 1);
+  sinifListesiniGuncelle();
+}
+
+// Sayfa yüklendiğinde sınıf listesini güncelle
+sinifListesiniGuncelle();

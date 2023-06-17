@@ -1,82 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: 'Poppins', sans-serif;
-
+margin: 0;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+text-align: center;
+margin-bottom: 20px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
 }
 
 form label {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 form input[type="text"],
 form input[type="number"] {
-  padding: 5px;
-  margin-bottom: 10px;
-  height: 20px;
-  width: 100%;
-  background-color: transparent;
-  color: #111111;
-  font-size: 0.9em;
-  border: 2px solid #d1d3d1;
-  padding: 1em 0.5em;
-  border-radius: 0.6em;
-  height: 1rem;
+padding: 5px;
+margin-bottom: 10px;
+width: 100%;
+background-color: transparent;
+color: #111111;
+font-size: 0.9em;
+border: 2px solid #d1d3d1;
+padding: 0.5em 0.5em;
+border-radius: 0.6em;
+height: 2rem;
 }
 
 form button[type="submit"] {
-  padding: 5px 10px;
-  position: relative;
-  border-radius: 0.5em;
-  font-weight: 500;
-  background-color: #5a95ff;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  height: 2.5rem;
+padding: 5px 10px;
+position: relative;
+border-radius: 0.5em;
+font-weight: 500;
+background-color: #5a95ff;
+border: none;
+outline: none;
+cursor: pointer;
+height: 2.5rem;
 }
 
 form button[type="submit"]:hover {
-  transform: scale(1.1);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 10px;
+transform: scale(1.1);
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
 }
 
 th, td {
-  padding: 8px;
-  text-align: left;
-  border: 1px solid white;
-  background-color: #96D4D4;
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+background-color: #96D4D4;
 }
 
-#wrapper input:focus {
-  outline: #5a95ff;
-  border-color: #5a95ff;
+tr.puan-kucuk td {
+background-color: #ff5c5c;
+}
+
+.actions {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.actions button {
+margin: 0 5px;
+padding: 5px 10px;
+border-radius: 0.5em;
+font-weight: 500;
+background-color: #5a95ff;
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+.actions button:hover {
+transform: scale(1.1);
 }
